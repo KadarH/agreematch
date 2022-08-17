@@ -1,0 +1,7 @@
+{
+  "name": "agreematch",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
