@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Match your freind
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,6 +12,31 @@
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
+  <swiper [autoplay]="true" [keyboard]="true" [pagination]="true" [scrollbar]="true" [zoom]="true">
+    <ng-container *ngFor="let avatar of avatars">
+      <ng-template swiperSlide>
+        <div class="sw-card-wrapper">
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+          <img [src]="avatar.image" [alt]="avatar.name">
+          <h2>{{avatar.name}}, {{avatar.age}}</h2>
+        </div>
+      </ng-template>
+    </ng-container>
+
+  </swiper>
+  <div class="button_box">
+    <ion-button class="small_button" mode="ios" shape="round" fill="outline">
+      <ion-icon color="warning" name="refresh"></ion-icon>
+    </ion-button>
+    <ion-button mode="ios" class="large_button" shape="round" fill="outline">
+      <ion-icon color="danger" name="close"></ion-icon>
+    </ion-button>
+    <div class="space"></div>
+    <ion-button  mode="ios" class="large_button" shape="round" fill="outline">
+      <ion-icon color="success" name="heart"></ion-icon>
+    </ion-button>
+    <ion-button class="small_button" mode="ios" shape="round" fill="outline">
+      <ion-icon color="primary" name="location-sharp"></ion-icon>
+    </ion-button>
+  </div>
 </ion-content>
